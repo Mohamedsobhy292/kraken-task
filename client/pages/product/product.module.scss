@@ -1,0 +1,49 @@
+.container {
+  min-height: 100vh;
+  width: 500px;
+  background-color:  var(--siphon);
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 25px 0;
+}
+
+.productHeader {
+  padding: 0 25px;
+}
+
+.productImg {
+  border-radius: 30px;
+  margin-bottom: 40px;
+}
+
+.productTitle {
+  margin-bottom: 25px;
+  color: var(--ice);
+}
+
+.productDetails {
+  color: var(--purpleHaze);
+  margin-bottom: 35px;
+  display: block;
+}
+
+.priceContainer {
+  display: flex;
+  align-items: center;
+  color: var(--ice);
+  margin-bottom: 35px;
+}
+
+.quantity {
+  margin-left: auto;
+}
+
+.price {
+  font-size: 26px;
+}
+
+.descriptionSection {
+  padding: 25px;
+  background-color: var(--hemocyanin);
+  margin-top: 25px;
+}
