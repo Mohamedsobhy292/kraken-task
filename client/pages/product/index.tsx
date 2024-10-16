@@ -6,12 +6,15 @@ import { GET_PRODUCT } from "./queries";
 import { Product } from "../../types";
 import { DocumentNode } from "graphql";
 import { Footer } from "../../components/footer";
+import { useState } from "react";
+import { Navbar } from "../../components/navbar";
 
 interface ProductData {
     product: Product;
 }
 
 export default function ProductPage() {
+    const [quantity, setQuantity] = useState(1);
     const { loading, error, data } = useQuery<ProductData>(
         GET_PRODUCT as DocumentNode
     );
@@ -23,9 +26,21 @@ export default function ProductPage() {
     }
 
     const { product } = data;
+    const decreaseQuantity = () => {
+        if (quantity > 1) {
+            setQuantity(quantity - 1);
+        }
+    };
+
+    const increaseQuantity = () => {
+        if (quantity < product.quantity) {
+            setQuantity(quantity + 1);
+        }
+    };
 
     return (
         <div className={styles.container}>
+            <Navbar />
             <section className={styles.productHeader}>
                 <img
                     src={product.img_url}
@@ -39,7 +54,13 @@ export default function ProductPage() {
 
                 <div className={styles.priceContainer}>
                     <h3 className={styles.price}>{product.price}</h3>
-                    <QuantityButton className={styles.quantity} />
+                    <QuantityButton
+                        className={styles.quantity}
+                        quantity={quantity}
+                        maxQuantity={product.quantity}
+                        increaseQuantity={increaseQuantity}
+                        decreaseQuantity={decreaseQuantity}
+                    />
                 </div>
                 <Button>Add to cart</Button>
             </section>
