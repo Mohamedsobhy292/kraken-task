@@ -5,6 +5,7 @@ import { useQuery } from "@apollo/client";
 import { GET_PRODUCT } from "./queries";
 import { Product } from "../../types";
 import { DocumentNode } from "graphql";
+import { Footer } from "../../components/footer";
 
 interface ProductData {
     product: Product;
@@ -15,10 +16,10 @@ export default function ProductPage() {
         GET_PRODUCT as DocumentNode
     );
     if (loading) {
-        return <div>Loading...</div>;
+        return <div className={styles.loading}>Loading...</div>;
     }
     if (error || !data?.product) {
-        return <div>Error...</div>;
+        return <div className={styles.error}>Error...</div>;
     }
 
     const { product } = data;
@@ -75,6 +76,7 @@ export default function ProductPage() {
                     </li>
                 </ul>
             </section>
+            <Footer />
         </div>
     );
 }
