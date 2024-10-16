@@ -1,83 +1,83 @@
 .container {
-  background-color:  var(--siphon);
-  margin: 0 auto;
+    background-color: var(--siphon);
+    margin: 0 auto;
 }
 
 .productHeader {
-  padding: 0 25px;
+    padding: 0 25px;
 }
 
 .productImg {
-  border-radius: 30px;
-  margin-bottom: 40px;
+    border-radius: 30px;
+    margin-bottom: 40px;
 }
 
 .productTitle {
-  margin-bottom: 25px;
-  color: var(--ice);
+    margin-bottom: 25px;
+    color: var(--ice);
 }
 
 .productDetails {
-  color: var(--purpleHaze);
-  margin-bottom: 35px;
-  display: block;
+    color: var(--purpleHaze);
+    margin-bottom: 35px;
+    display: block;
 }
 
 .priceContainer {
-  display: flex;
-  align-items: center;
-  color: var(--ice);
-  margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+    color: var(--ice);
+    margin-bottom: 35px;
 }
 
 .quantity {
-  margin-left: auto;
+    margin-left: auto;
 }
 
 .price {
-  font-size: 26px;
+    font-size: 26px;
 }
 
 .descriptionSection {
-  padding: 25px;
-  background-color: var(--hemocyanin);
-  margin-top: 25px;
+    padding: 25px;
+    background-color: var(--hemocyanin);
+    margin-top: 25px;
 }
 
 .section {
-  padding: 25px;
+    padding: 25px;
 }
 
 .sectionTitle {
-  color: var(--ice);
-  font-size: 28px;
-  font-weight: 400;
-  margin-bottom: 30px;
+    color: var(--ice);
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 30px;
 }
 
 .productSpecs {
-  li {
-    display: flex;
-    h4, span {
-      font-weight: 300;
-      width: 50%;
-      margin-bottom: 30px;
+    li {
+        display: flex;
+        h4,
+        span {
+            font-weight: 300;
+            width: 50%;
+            margin-bottom: 30px;
+        }
     }
-  }
 }
 
-
 .loading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .error {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: red;
 }

@@ -16,7 +16,7 @@ interface ProductData {
 export default function ProductPage() {
     const [quantity, setQuantity] = useState(1);
     const { loading, error, data } = useQuery<ProductData>(
-        GET_PRODUCT as DocumentNode
+        GET_PRODUCT as DocumentNode,
     );
     if (loading) {
         return <div className={styles.loading}>Loading...</div>;

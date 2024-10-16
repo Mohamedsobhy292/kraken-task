@@ -8,7 +8,8 @@
         "start": "next start",
         "server": "yarn run json-graphql-server ../server/db.js --p 3001",
         "test": "jest",
-        "type-check": "tsc"
+        "type-check": "tsc",
+        "pretty": "prettier --write ."
     },
     "dependencies": {
         "@apollo/client": "^3.11.8",
