@@ -9,6 +9,14 @@ export const GET_PRODUCT = gql`
             img_url
             quantity
             power
+            description
+            brand
+            weight
+            height
+            width
+            length
+            model_code
+            colour
         }
     }
 `;

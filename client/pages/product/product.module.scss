@@ -47,3 +47,25 @@
   background-color: var(--hemocyanin);
   margin-top: 25px;
 }
+
+.section {
+  padding: 25px;
+}
+
+.sectionTitle {
+  color: var(--ice);
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.productSpecs {
+  li {
+    display: flex;
+    h4, span {
+      font-weight: 300;
+      width: 50%;
+      margin-bottom: 30px;
+    }
+  }
+}

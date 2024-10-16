@@ -44,12 +44,36 @@ export default function ProductPage() {
             </section>
 
             <section className={styles.descriptionSection}>
-                <h3>Description</h3>
-                <p>
-                    Available in 7 watts, 9 watts, 11 watts Spiral Light bulb in
-                    B22, bulb switches on instantly, no wait around warm start
-                    and flicker free features make for a great all purpose bulb
-                </p>
+                <h3 className={styles.sectionTitle}>Description</h3>
+                <p>{product.description}</p>
+            </section>
+
+            <section className={styles.section}>
+                <h3 className={styles.sectionTitle}>Specification</h3>
+                <ul className={styles.productSpecs}>
+                    <li>
+                        <h4>Brand</h4>
+                        <span>{product.brand}</span>
+                    </li>
+                    <li>
+                        <h4>Item Weight (g)</h4>
+                        <span>{product.weight}</span>
+                    </li>
+                    <li>
+                        <h4>Dimensions (cm)</h4>
+                        <span>
+                            {product.height} x {product.width} x{product.length}
+                        </span>
+                    </li>
+                    <li>
+                        <h4>Item Model number</h4>
+                        <span>{product.model_code}</span>
+                    </li>
+                    <li>
+                        <h4>Color</h4>
+                        <span>{product.colour}</span>
+                    </li>
+                </ul>
             </section>
         </div>
     );
