@@ -6,6 +6,8 @@ import {
     ApolloProvider,
     gql,
 } from "@apollo/client";
+import { Navbar } from "../components/navbar";
+import { Footer } from "../components/footer";
 
 const client = new ApolloClient({
     uri: "http://localhost:3001",
@@ -15,7 +17,9 @@ const client = new ApolloClient({
 function MyApp({ Component, pageProps }: AppProps) {
     return (
         <ApolloProvider client={client}>
+            <Navbar />
             <Component {...pageProps} />
+            <Footer />
         </ApolloProvider>
     );
 }

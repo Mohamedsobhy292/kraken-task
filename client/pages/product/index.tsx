@@ -38,9 +38,15 @@ export default function ProductPage() {
         }
     };
 
+    const formatPrice = (price: number) => {
+        return (price / 100).toLocaleString("en-GB", {
+            style: "currency",
+            currency: "GBP",
+        });
+    };
+
     return (
         <div className={styles.container}>
-            <Navbar />
             <section className={styles.productHeader}>
                 <img
                     src={product.img_url}
@@ -53,7 +59,9 @@ export default function ProductPage() {
                 </span>
 
                 <div className={styles.priceContainer}>
-                    <h3 className={styles.price}>{product.price}</h3>
+                    <h3 className={styles.price}>
+                        {formatPrice(product.price)}
+                    </h3>
                     <QuantityButton
                         className={styles.quantity}
                         quantity={quantity}
@@ -97,7 +105,6 @@ export default function ProductPage() {
                     </li>
                 </ul>
             </section>
-            <Footer />
         </div>
     );
 }
