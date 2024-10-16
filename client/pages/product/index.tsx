@@ -5,9 +5,8 @@ import { useQuery } from "@apollo/client";
 import { GET_PRODUCT } from "./queries";
 import { Product } from "../../types";
 import { DocumentNode } from "graphql";
-import { Footer } from "../../components/footer";
 import { useState } from "react";
-import { Navbar } from "../../components/navbar";
+import { useCartContext } from "../../context/cart-context";
 
 interface ProductData {
     product: Product;
@@ -15,8 +14,9 @@ interface ProductData {
 
 export default function ProductPage() {
     const [quantity, setQuantity] = useState(1);
+    const { setItemsCount } = useCartContext();
     const { loading, error, data } = useQuery<ProductData>(
-        GET_PRODUCT as DocumentNode,
+        GET_PRODUCT as DocumentNode
     );
     if (loading) {
         return <div className={styles.loading}>Loading...</div>;
@@ -70,7 +70,9 @@ export default function ProductPage() {
                         decreaseQuantity={decreaseQuantity}
                     />
                 </div>
-                <Button>Add to cart</Button>
+                <Button onClick={() => setItemsCount(quantity)}>
+                    Add to cart
+                </Button>
             </section>
 
             <section className={styles.descriptionSection}>

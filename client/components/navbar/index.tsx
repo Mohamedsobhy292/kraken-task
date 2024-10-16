@@ -2,8 +2,10 @@ import React from "react";
 import styles from "./navbar.module.scss";
 import { CartIcon } from "../../icons/cart";
 import Link from "next/link";
+import { useCartContext } from "../../context/cart-context";
 
 export const Navbar = () => {
+    const { itemsCount } = useCartContext();
     return (
         <nav className={styles.navbar}>
             <Link href="/">
@@ -21,6 +23,9 @@ export const Navbar = () => {
 
             <span className={styles.cart}>
                 <CartIcon color="#fff" />
+                {!!itemsCount && (
+                    <span className={styles.count}>{itemsCount}</span>
+                )}
             </span>
         </nav>
     );

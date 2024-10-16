@@ -8,6 +8,7 @@ import {
 } from "@apollo/client";
 import { Navbar } from "../components/navbar";
 import { Footer } from "../components/footer";
+import { CartContextProvider } from "../context/cart-context";
 
 const client = new ApolloClient({
     uri: "http://localhost:3001",
@@ -17,9 +18,11 @@ const client = new ApolloClient({
 function MyApp({ Component, pageProps }: AppProps) {
     return (
         <ApolloProvider client={client}>
-            <Navbar />
-            <Component {...pageProps} />
-            <Footer />
+            <CartContextProvider>
+                <Navbar />
+                <Component {...pageProps} />
+                <Footer />
+            </CartContextProvider>
         </ApolloProvider>
     );
 }
