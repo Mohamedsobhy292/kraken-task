@@ -19,7 +19,7 @@
         "next": "12.2.1",
         "react": "17.0.2",
         "react-dom": "17.0.2",
-        "sass": "^1.79.3"
+        "sass": "^1.80.2"
     },
     "devDependencies": {
         "@eslint/js": "^9.12.0",
