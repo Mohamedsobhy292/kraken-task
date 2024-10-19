@@ -25,7 +25,7 @@
 
 .priceContainer {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     color: var(--ice);
     margin-bottom: 35px;
 }
@@ -58,11 +58,13 @@
 .productSpecs {
     li {
         display: flex;
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
         h4,
         span {
             font-weight: 300;
             width: 50%;
-            margin-bottom: 30px;
         }
     }
 }

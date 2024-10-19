@@ -21,7 +21,7 @@ export const Navbar = () => {
                 </h1>
             </Link>
 
-            <span className={styles.cart}>
+            <span className={styles.cart} title="Basket items">
                 <CartIcon color="#fff" />
                 {!!itemsCount && (
                     <span className={styles.count}>{itemsCount}</span>

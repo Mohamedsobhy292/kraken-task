@@ -19,6 +19,7 @@ export const QuantityButton = ({
 }: QuantityButtonProps) => {
     return (
         <div className={className}>
+            <h4 className={styles.title}>Qty</h4>
             <Button
                 className={`${styles.button} ${
                     quantity <= 1 ? styles.disabled : ""
@@ -27,7 +28,10 @@ export const QuantityButton = ({
             >
                 -
             </Button>
-            <span className={styles.title}> {quantity}</span>
+            <span className={styles.quantity} title="Current Quantity">
+                {" "}
+                {quantity}
+            </span>
             <Button
                 className={`${styles.button} ${
                     quantity === maxQuantity ? styles.disabled : ""
