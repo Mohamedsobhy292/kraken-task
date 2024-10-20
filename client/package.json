@@ -3,10 +3,10 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "dev": "yarn server & next dev",
+        "dev": "yarn server & next dev -p 3000",
         "build": "next build",
         "start": "next start",
-        "server": "yarn run json-graphql-server ../server/db.js --p 3001",
+        "server": "node ../server/index.js ",
         "test": "jest",
         "type-check": "tsc",
         "pretty": "prettier --write .",
